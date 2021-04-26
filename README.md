@@ -14,6 +14,28 @@ The file "file.bin" is required to generate a file in Intel HEX format. The resu
 
 Switching from encoding mode to decoding mode and vice versa is performed by the "CODING_DECODING" variable of bool type, where **true** value means decoding mode and **false** value means encoding mode. 
 
+This is the table that was used to perform coding: 
+| Character | Code word |
+| --------- | --------- |
+| 0|0 0000|
+|1| 0 0001 |
+|2| 0 0010 |
+|3| 0 0011 |
+|4| 0 0100 |
+|5| 0 0101 |
+|6| 0 0110 |
+|7| 0 0111 |
+|8| 0 1000 |
+|9| 0 1001 |
+|A| 0 1010 |
+|B| 0 1011 |
+|C| 0 1100 |
+|E| 0 1101 |
+|F| 0 1111 |
+| :| 1 0000 |
+| \n | 1 0001 |
+
+
 The program is divided into several functions:
 
 *void save_to_file(const string &filename, const string& content)*
